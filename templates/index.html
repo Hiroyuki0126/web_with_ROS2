@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>MIRS2403ホームページ</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div id = container >
+
+            <!--見出し-
+            ------------------------------------------------------------------>
+            <header>
+                <h1>MIRS2403</h1>
+            </header>
+
+            <!--メニューバー
+            ------------------------------------------------------------------>
+            <nav id="menubar">
+                <ul>
+                    <li><a href="./index.html">椅子の配置指令</a></li>
+                    <li><a href="./collect.html">椅子の回収指令</a></li>
+                    <li><a href="https://www2.denshi.numazu-ct.ac.jp/mirsdoc2/mirs2403/">2403管理台帳</a></li>
+                </ul>
+            </nav>
+            <form id="seatForm">
+                <!--人数
+                ------------------------------------------------------------------->
+                <h2>人数</h2>
+                <label for="numberOfPeople"><p>人数を入力してください</p> </label>
+                    <p>
+                        <input type="number" id="numberOfPeople" min="1" placeholder="例: 10" required>
+                    </p>
+                    
+                <!--配置パターン
+                ------------------------------------------------------------------->
+                <h2>配置パターン</h2>
+                <p>配置を選択してください</p> 
+                <div class ="center">
+                    <input id="rect" type="radio" value="rect" name="arrangementPattern">
+                    <label for="rect">
+                        <img src="../static/img/rect.png" with="100" height="100">
+                        <p>長方形型</p>
+                    </label>
+
+                    <input id="fan" type="radio" value="fan" name="arrangementPattern">
+                    <label for="fan">
+                        <img src="../static/img/fan.png" with="120" height="120">
+                        <p>扇型</p>
+                    </label>
+                </div>
+                <!--作業ボタン
+                ------------------------------------------------------------------->
+                <h2>設置作業開始</h2>
+                <div class="button-group">
+                    <button type="button" class="start-button" onclick="startArrangement()">開始</button>
+                    <button type="button" class="stop-button" onclick="stopArrangement()">中断</button>
+                </div>
+            </form>
+        </div>
+        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    </body>
+</html>

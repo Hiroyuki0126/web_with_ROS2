@@ -1,0 +1,179 @@
+@charset "UTF-8";
+/*全体の設定*/
+body {
+    margin: 0px;
+	padding: 0px;
+	-webkit-text-size-adjust: none;
+	color: #666;	/*全体の文字色*/
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ",  "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-size: 16px;	/*文字サイズ*/
+	line-height: 2;		/*行間*/
+	background: #fff;	/*背景色*/
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,select,input,textarea {
+    margin: 0px;
+    padding: 0px;
+    font-size: 100%;
+    font-weight: normal;
+}
+/*リンク*/
+a {
+	color: #666;	/*リンクテキストの色*/
+	transition: 0.3s;	/*マウスオン時の移り変わるまでの時間設定。0.3秒。*/
+}
+a:hover {
+	color: #d08047;	/*マウスオン時の文字色*/
+}
+
+/*コンテナ*/
+#container {
+	max-width: 1400px;	/*ブロックの最大幅*/
+	margin: 0 auto;
+	padding: 0 3%;
+}
+
+/*ヘッダー*/
+header {
+	text-align: center;	/*内容を中央よせ*/
+}
+h1{
+    font-size: 500%;
+	color: #d08047;
+}
+
+
+/*メニューバー
+---------------------------------------------------------------------------*/
+/*メニュー全体を囲むブロック*/
+#menubar {
+	text-align: center;		/*文字をセンタリング*/
+	font-size: 18px;		/*文字サイズ*/
+	margin-bottom: 40px;	/*下に空けるスペース*/
+}
+/*メニュー１個あたりの設定*/
+#menubar li {
+	display: inline;	/*横並びにする設定*/
+}
+#menubar li a {
+	text-decoration: none;
+	padding: 15px 30px;	/*各メニュー内の余白。上下に15px、左右に30pxあけるという意味。*/
+}
+/*マウスオン時の設定*/
+#menubar li a:hover {
+	color: #d08047;	/*文字色*/
+	border-bottom: 4px solid #d08047;	/*下線の幅、線種、色*/
+}
+
+/*コンテンツ（見出しバーや文字などが入っているブロック）
+---------------------------------------------------------------------------*/
+h2 {
+	clear: both;
+	margin-bottom: 20px;
+	color: #fff;		/*文字色*/
+	padding: 10px 20px;	/*上下、左右へ余白*/
+	background: #d08047;	/*背景色*/
+	border-radius: 10px;	/*角を丸くする指定。この１行を削除すれば角丸がなくなります。*/
+}
+
+p{
+    padding: 0px 20px;	/*上下、左右へのブロック内の余白*/
+	margin-bottom: 10px;	/*ブロックの下(外側)に空ける余白*/
+}
+/*ボタンのセンタリング*/
+.center {
+	margin-bottom:15px;
+	text-align:center;
+}
+/*人数フォーム
+----------------------------------------------------------------------------*/
+input[type="text"] {
+	border-radius: 3%;
+	padding: 5px 20px;
+	margin-bottom: 10px;
+}
+/*選択肢ボタン
+----------------------------------------------------------------------------*/
+/* ラジオボタンの○を消す */
+input[type="radio"] {
+    display: none;
+}
+.center label {
+	display: inline-block;
+	margin:5%;
+}
+/* 画像の周りに隙間をあける */
+label img {
+    margin: 3%;
+    padding: 3%;
+	/*background: #fff;	/*背景色*/
+	border-radius: 10px;
+	/*padding: 20px 20px;*/
+}
+/* 未選択の場合、色を薄くする */
+/*input[type="radio"] + label img {
+    opacity:0.5;
+  }
+/* 選択済みの場合、色を濃くする */
+input[type="radio"]:checked + label img {
+    opacity:1;
+	background-color: #d08047;
+}
+
+
+/*設置作業開始ボタンと停止ボタン
+----------------------------------------------------------------------------*/
+.button-group {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	margin: 20px;
+  }
+  .start-button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+  }
+  .start-button:hover {
+	background-color: #0056b3;
+  }
+  .stop-button {
+	background-color: #ff4d4d;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+  }
+  .stop-button:hover {
+	background-color: #cc0000;
+  }
+
+  input, button {
+	width: 20%;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+  }
+/*Galleryページ
+---------------------------------------------------------------------------*/
+/*各ブロックごとの設定*/
+.list {
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;	/*下線の幅、線種、色*/
+	padding: 20px;	/*ボックス内の余白*/
+}
+/*h4見出しの設定*/
+.list h4 {
+	color: #d08047;	/*文字色*/
+}
+/*画像の設定*/
+.list img {
+	width: 20%;			/*画像幅*/
+	float: left;		/*画像を左に回り込み*/
+	margin-right: 3%	/*画像の右側に空けるスペース*/
+}
+/*段落タグ*/
+.list p {
+	padding: 0 !important;
+}
